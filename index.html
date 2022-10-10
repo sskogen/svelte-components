@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte</title>
+  </head>
+  <style>
+      body {
+          max-width: 1024px;
+          margin: auto;
+      }
+      .cards {
+          list-style-type: none;
+          padding: 0;
+          display: grid;
+          gap: 1rem;
+      }
+      @media (min-width: 1200px) {
+          .cards { grid-template-columns: repeat(2, 1fr); }
+      }
+  </style>
+  <body>
+    <h1>
+        Svelte web component demo
+    </h1>
+    <script type="module" src="/src/main.js"></script>
+    <ul class="cards">
+        <li><card-element></card-element></li>
+        <li><card-element></card-element></li>
+        <li><card-element></card-element></li>
+        <li><card-element></card-element></li>
+        <li><card-element></card-element></li>
+        <li><card-element></card-element></li>
+    </ul>
+  </body>
+</html>
